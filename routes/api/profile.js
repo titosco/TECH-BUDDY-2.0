@@ -48,7 +48,7 @@ router.post('/', [auth, [
         skills,
         youtube,
         facebook,
-        twitter,
+        x,
         instagram,
         linkedin
     } = req.body
@@ -69,14 +69,14 @@ router.post('/', [auth, [
     // build social objsct
     profileFields.social = {}
     if (youtube) profileFields.social.youtube = youtube;
-    if (twitter) profileFields.social.twitter = twitter;
+    if (x) profileFields.social.x = x;
     if (facebook) profileFields.social.facebook = facebook;
     if (linkedin) profileFields.social.linkedin = linkedin;
     if (instagram) profileFields.social.instagram = instagram;
 
-    console.log(profileFields.skills);
+    // console.log(profileFields.skills);
 
-    
+    // await Profile.save();
     try {
         let profile = await Profile.findOne({ user: req.user.id});
 
@@ -93,7 +93,7 @@ router.post('/', [auth, [
         profile = new Profile(profileFields);
 
         await profile.save();
-        res.json(profile)
+        res.json(profile);
         
     } catch (err) {
         console.error(err.message)
