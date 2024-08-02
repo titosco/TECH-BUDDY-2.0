@@ -36,4 +36,12 @@ login user and use bycrypt to compare password inputed and the actual password s
 
 ### Create profile model
 
+Creating a schema for
+user,
+company,
+website
+social-youtube, x, facebook, linkedin
+experience,
+education
+
 ### AI integration, Promt engineering, AI assimulation
