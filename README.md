@@ -44,4 +44,8 @@ social-youtube, x, facebook, linkedin
 experience,
 education
 
+### update, delete user, profile model
+
+updating profile and deleting profiles and users
+
 ### AI integration, Promt engineering, AI assimulation
